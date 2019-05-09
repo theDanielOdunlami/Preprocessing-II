@@ -1,0 +1,17 @@
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 5%;
+  padding: 5%;
+  border-bottom: 1px solid black;
+}
+.navigation .nav {
+  font-size: 1.5rem;
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+}

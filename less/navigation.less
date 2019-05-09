@@ -1,1 +1,28 @@
 // Navigation Styles here
+
+// MIXINS
+.flexbox(@flex-dir: row, @just-cont: flex-start, @align-items: stretch) {
+    display: flex;
+    flex-direction: @flex-dir;
+    justify-content: @just-cont;
+    align-items: @align-items;
+  }
+// styles
+.navigation{
+    
+    .flexbox(row,space-between,flex-end);
+    margin-bottom: 5%;
+    padding: 5%;
+    border-bottom: 1px solid black;
+    .nav{
+        font-size: 1.5rem;
+        width: 40%;
+        .flexbox(row, space-between, stretch);
+        
+   
+    }
+}
+// a{
+//     color:red;
+// //     .flexbox(row, space-around, flex-start);
+// }
