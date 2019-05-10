@@ -11,17 +11,28 @@
 .navigation{
     
     .flexbox(row,space-between,flex-end);
-    margin-bottom: 5%;
+    margin-bottom: 0%;
     padding: 5%;
-    border-bottom: 1px solid black;
+    border-bottom: 1px dashed @silver;
     .nav{
         font-size: 1.5rem;
         width: 40%;
         .flexbox(row, space-between, stretch);
-        
-   
+        @media @mobile-small{
+            .flexbox(row, space-between, center);
+            width: 100%;
+            padding: 0%;
+            margin: 0%,
+        }
+    }
+    @media @mobile-small{
+        .flexbox(column, center, center);
+        margin-bottom: 0%;
+        padding-bottom: 2%;
+        color: black;
     }
 }
+
 // a{
 //     color:red;
 // //     .flexbox(row, space-around, flex-start);
