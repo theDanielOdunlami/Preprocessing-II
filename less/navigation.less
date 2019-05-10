@@ -1,1 +1,39 @@
 // Navigation Styles here
+
+// MIXINS
+.flexbox(@flex-dir: row, @just-cont: flex-start, @align-items: stretch) {
+    display: flex;
+    flex-direction: @flex-dir;
+    justify-content: @just-cont;
+    align-items: @align-items;
+  }
+// styles
+.navigation{
+    
+    .flexbox(row,space-between,flex-end);
+    margin-bottom: 0%;
+    padding: 5%;
+    border-bottom: 1px dashed @silver;
+    .nav{
+        font-size: 1.5rem;
+        width: 40%;
+        .flexbox(row, space-between, stretch);
+        @media @mobile-small{
+            .flexbox(row, space-between, center);
+            width: 100%;
+            padding: 0%;
+            margin: 0%,
+        }
+    }
+    @media @mobile-small{
+        .flexbox(column, center, center);
+        margin-bottom: 0%;
+        padding-bottom: 2%;
+        color: black;
+    }
+}
+
+// a{
+//     color:red;
+// //     .flexbox(row, space-around, flex-start);
+// }
